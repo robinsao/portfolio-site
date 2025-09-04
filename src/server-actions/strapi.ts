@@ -15,9 +15,6 @@ async function fetchPublishedBlogs(
       Authorization: `Bearer ${process.env.STRAPI_API_KEY}`,
     }),
     method: "GET",
-    next: {
-      revalidate: 3600,
-    },
   });
 
   throwIfHttpResponseError(response);
