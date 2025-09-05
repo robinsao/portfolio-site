@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur border-b border-gray-200 dark:border-gray-800">
       {/* Center: Logo */}
       <Link
-        href="/"
+        href="/#intro"
         className="absolute left-1/2 -translate-x-1/2 px-3 py-1 mt-2 
         hidden xl:flex items-center justify-center 
         bg-black text-white rounded-full font-bold text-xl shadow-lg border-2"
@@ -26,7 +26,7 @@ function Navbar() {
   [&_a]:text-center [&_a]:py-2 [&_a]:md:py-4 [&_a]:px-2 [&_a]:hover:scale-110"
       >
         <Link
-          href="/"
+          href="/#intro"
           className="text-black dark:text-white hover:text-blue-600 transition"
         >
           Home
