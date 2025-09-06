@@ -13,17 +13,17 @@ async function BlogItem({ blog }: { blog: Blog }) {
     <Link href="https://blog.robinsao.uk" target="_blank">
       <article
         className="group w-full grid grid-cols-[1fr_2fr] overflow-clip grid-rows-1 h-60 gap-x-8 border-2 shadow-xl rounded-2xl
-      hover:shadow-2xl transition-shadow hover:-translate-y-3"
+      hover:shadow-2xl hover:-translate-y-3"
       >
         <div className="relative">
           <Image
             src={`${process.env.STRAPI_BASE_URL}${blog.cover?.url}` || ""}
             alt={blog.cover!.alternativeText}
             fill
-            className="w-full group-hover:scale-120 transition-transform duration-300 object-cover"
+            className="w-full group-hover:scale-110 transition-transform duration-300 object-cover"
           />
         </div>
-        <div className="relative flex flex-col justify-center items-start pr-8 py-4">
+        <div className="relative flex flex-col justify-center items-start pr-8 py-4 text-foreground">
           <h2 className="text-2xl font-bold">{blog.title}</h2>
           <h3 className="opacity-50 mb-4">{createdAtFormatted}</h3>
           <p className="text-lg">{blog.excerpt}</p>
@@ -62,7 +62,10 @@ export default async function RecentBlogsSection({
         Recent Blogs
       </h1>
 
-      <ul className="w-5/6 max-w-6xl">
+      <ul
+        className="w-5/6 max-w-6xl 
+          [&_article]:transition-[box-shadow,translate,background-color,color] [&_a]:duration-700 [&_img]:transition-transform"
+      >
         <li className="w-full">
           {blogs.map((b) => (
             <BlogItem key={b.slug} blog={b} />

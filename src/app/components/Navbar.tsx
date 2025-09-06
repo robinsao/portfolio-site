@@ -8,7 +8,11 @@ import NavbarContent from "./NavbarContentWrapper";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <nav
+      className="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-950/80 
+        backdrop-blur border-b border-gray-200 dark:border-gray-800
+        [&_a]:transition-all [&_a]:duration-150 "
+    >
       {/* Center: Logo */}
       <Link
         href="/#intro"
@@ -27,31 +31,31 @@ function Navbar() {
       >
         <Link
           href="/#intro"
-          className="text-black dark:text-white hover:text-blue-600 transition"
+          className="text-black dark:text-white hover:text-blue-600"
         >
           Home
         </Link>
         <Link
           href="/#tech-stack"
-          className="text-black dark:text-white hover:text-blue-600 transition"
+          className="text-black dark:text-white hover:text-blue-600"
         >
           Tech Stack
         </Link>
         <Link
           href="/#recent-blogs"
-          className="text-black dark:text-white hover:text-blue-600 transition"
+          className="text-black dark:text-white hover:text-blue-600"
         >
           Recent Blogs
         </Link>
         <Link
           href="/#projects"
-          className="text-black dark:text-white hover:text-blue-600 transition"
+          className="text-black dark:text-white hover:text-blue-600"
         >
           Projects
         </Link>
         <Link
           href="/#contact"
-          className="text-black dark:text-white hover:text-blue-600 transition
+          className="text-black dark:text-white hover:text-blue-600
            col-span-2 sm:col-span-1"
         >
           Contact
@@ -63,7 +67,7 @@ function Navbar() {
             href="https://linkedin.com/in/robin-sao"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform"
+            className="hover:scale-110"
           >
             <FaLinkedin
               size={22}
@@ -75,7 +79,7 @@ function Navbar() {
             href="https://blog.robinsao.uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform"
+            className="hover:scale-110"
           >
             <FaNewspaper size={22} className="text-black dark:text-white" />
           </a>
@@ -83,7 +87,7 @@ function Navbar() {
             href="https://github.com/robinsao"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110 transition-transform"
+            className="hover:scale-110"
           >
             <FaGithub size={22} className="text-black dark:text-white" />
           </a>

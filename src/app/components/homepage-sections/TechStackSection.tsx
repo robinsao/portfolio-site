@@ -8,7 +8,7 @@ export default function TechStackSection() {
       <div
         id="tech-stack"
         className="snap-start min-h-screen flex flex-col justify-center items-center
-        [&_h1]:text-shadow-lg [&_h2]:text-shadow-lg "
+        [&_h1]:text-shadow-lg [&_h2]:text-shadow-lg"
       >
         <h1 className="text-center text-4xl md:text-5xl font-extrabold mb-16">
           Tech Stack
@@ -70,7 +70,7 @@ export default function TechStackSection() {
                   href="https://www.credly.com/badges/57ccdd90-38dd-4514-9126-58a6c991e1b0/public_url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col relative items-center [&_*]:font-light"
+                  className="flex flex-col relative items-center [&_*]:font-light text-foreground"
                 >
                   <TechStackImage
                     src="/techstack-icons/aws.png"

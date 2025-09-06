@@ -8,7 +8,7 @@ export default function IntroSection() {
     >
       {/* Headline & description */}
       <div className="max-w-xl">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl text-center md:text-left font-extrabold mb-6 leading-tight text-gray-900 dark:text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl text-center md:text-left font-extrabold mb-6 leading-tight">
           <span className="hidden sm:inline-block md:hidden lg:inline-block transform scale-x-150">
             - &nbsp;
           </span>

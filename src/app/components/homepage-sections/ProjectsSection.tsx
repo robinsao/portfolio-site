@@ -39,7 +39,10 @@ export default function ProjectsSection({ className }: { className?: string }) {
       <h1 className="text-4xl md:text-5xl font-bold text-center text-shadow-lg mt-24 mb-12 w-full">
         Selected Projects
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-5/6 max-w-7xl">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 w-5/6 max-w-7xl 
+                [&_a]:transition-[box-shadow,translate,background-color,color] [&_a]:duration-500 [&_img]:transition-transform"
+      >
         {projects.map((project) => (
           <a
             key={project.github}
@@ -48,8 +51,8 @@ export default function ProjectsSection({ className }: { className?: string }) {
             rel="noopener noreferrer"
             className="group h-[66vh] min-h-96 max-h-[50rem] rounded-2xl 
                 grid grid-cols-1 grid-rows-[1fr_minmax(120px,auto)]
-                shadow-lg border
-                hover:shadow-2xl transition-shadow overflow-hidden hover:-translate-y-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                shadow-lg border overflow-hidden
+                hover:shadow-2xl hover:-translate-y-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <div className="relative h-full flex items-center justify-center overflow-hidden">
               <Image
@@ -60,7 +63,7 @@ export default function ProjectsSection({ className }: { className?: string }) {
                 loading="lazy"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 text-foreground">
               <h2 className="text-2xl font-semibold mb-2">{project.name}</h2>
               {project.subtitle && (
                 <h3 className="text-lg opacity-50 mb-2">{project.subtitle}</h3>

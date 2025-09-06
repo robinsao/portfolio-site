@@ -25,7 +25,8 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable} scroll-smooth`}
+      className={`${poppins.variable} scroll-smooth 
+        [&_*]:transition-[background-color,color,opacity] [&_*]:ease-linear [&_*]:duration-500`}
     >
       <body
         className={`font-(family-name:--font-poppins) relative antialiased bg-white dark:bg-gray-950 min-h-screen flex flex-col`}
